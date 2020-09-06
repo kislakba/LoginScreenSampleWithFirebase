@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_input_margins">30dp</dimen>
+    <dimen name="button_margins">80dp</dimen>
+    <dimen name="card_margins">16dp</dimen>
+    <dimen name="card_top_bottom_margins">8dp</dimen>
+    <dimen name="register_text_margins">16dp</dimen>
+    <dimen name="padding_size">12dp</dimen>
+    <dimen name="button_radius">5dp</dimen>
+    <dimen name="output_text_size">24sp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+</resources>

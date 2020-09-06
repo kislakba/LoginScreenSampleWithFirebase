@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">login-screen-sample-with-firebase</string>
+    <string name="Login">Login</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="prompt_password">Password</string>
+    <string name="login">Login</string>
+    <string name="Register">Register</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="Send_Reset_eMail">Send Reset E-mail</string>
+    <string name="Enter_your_eMail">Enter Your E-Mail</string>
+    <string name="enter_your_passWord">Enter Your Password</string>
+    <string name="enter_your_username">Enter Your Username</string>
+    <string name="enter_valid_mail">Please Enter Valid E-Mail</string>
+    <string name="enter_valid_password">Please Enter Valid Password</string>
+    <string name="RegisterC">Don\'t you have an account?</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="change_name">Change Name</string>
+    <string name="verify_Sent">Verification Mail Has Been Sent</string>
+    <string name="verify_your_acc">Please Verify Your Account</string>
+    <string name="already_member">You Already have an account</string>
+    <string name="reset_pass">Password Reset Mail Has Been Sent</string>
+    <string name="please_wait">Please Wait…</string>
+    <string name="success_sent">Mail Successfully Sent</string>
+    <string name="login_success">You Logged In Successfully</string>
+    <string name="login_failed">Login Failed, Please Try Again in Moment</string>
+    <string name="blank"> </string>
+    <string name="fill_fields">Please Fill The All Fields</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="welcome_to_app_name">Welcome To AppName</string>
+    <string name="register_to_yourAppName">Register To yourAppName</string>
+    <string name="enter_your_e_mail_for_reset_password">Enter Your E-Mail \n For Reset Password</string>
+    <string name="search">Search</string>
 </resources>
