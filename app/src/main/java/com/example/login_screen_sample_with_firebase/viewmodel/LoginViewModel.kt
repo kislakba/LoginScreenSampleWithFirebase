@@ -1,4 +1,4 @@
-package com.multilanguagechat.app.viewmodel
+package com.example.login_screen_sample_with_firebase.viewmodel
 
 import android.app.AlertDialog
 import android.text.TextUtils
@@ -25,7 +25,7 @@ class LoginViewModel : ViewModel() {
                             if (user?.isEmailVerified!!) {
                                 makeUserValid(user)
                                 closeLoadingDialog()
-                                nav.navigate(R.id.action_loginFragment_to_allUsersFragment)
+                                nav.navigate(R.id.action_loginFragment_to_onSuccessFragment)
                             }else{
                                 closeLoadingDialog()
                                 Snackbar.make(view!!,R.string.verify_your_acc, Snackbar.LENGTH_LONG)

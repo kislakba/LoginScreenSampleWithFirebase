@@ -7,14 +7,17 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.multilanguagechat.app.view.LoginFragment"
-        android:label="LoginFragment" >
+        android:name="com.example.login_screen_sample_with_firebase.view.LoginFragment"
+        android:label="LoginFragment">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_resetPasswordFragment"
             app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_onSuccessFragment"
+            app:destination="@id/onSuccessFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -37,4 +40,8 @@
             android:id="@+id/action_resetPasswordFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/onSuccessFragment"
+        android:name="com.example.login_screen_sample_with_firebase.view.OnSuccessFragment"
+        android:label="OnSuccessFragment" />
 </navigation>

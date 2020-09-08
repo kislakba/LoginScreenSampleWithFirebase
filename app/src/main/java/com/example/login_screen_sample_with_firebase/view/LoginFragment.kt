@@ -16,7 +16,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.multilanguagechat.app.viewmodel.LoginViewModel
+import com.example.login_screen_sample_with_firebase.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
@@ -62,7 +62,7 @@ class LoginFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
         nav = Navigation.findNavController(requireView())
         if(auth.currentUser != null){
-            //nav.navigate(R.id.action_loginFragment_to_allUsersFragment)  it will navigate your enter screen
+            nav.navigate(R.id.action_loginFragment_to_onSuccessFragment) // it will navigate your enter screen
         }
         loginButton.setOnClickListener {
             viewModel.openLoadingDialog(requireActivity())
@@ -95,7 +95,7 @@ class LoginFragment : Fragment() {
                         .show()
                     viewModel.saveToDatabase(auth.currentUser?.uid, auth.currentUser?.displayName!!)
                     viewModel.makeUserValid(auth.currentUser!!)
-                    //nav.navigate(R.id.action_loginFragment_to_allUsersFragment)   --> you can navigate to your main page
+                    nav.navigate(R.id.action_loginFragment_to_onSuccessFragment)   //--> you can navigate to your main page
                     viewModel.closeLoadingDialog()
                 } else {
                     viewModel.closeLoadingDialog()

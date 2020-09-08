@@ -3,15 +3,12 @@ package com.multilanguagechat.app.viewmodel
 import android.app.AlertDialog
 import android.text.TextUtils
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
+import com.example.login_screen_sample_with_firebase.R
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
-import com.multilanguagechat.app.R
-import com.multilanguagechat.app.view.LoginFragment
 
 class ResetPasswordViewModel : ViewModel() {
     private lateinit var dialog : AlertDialog
