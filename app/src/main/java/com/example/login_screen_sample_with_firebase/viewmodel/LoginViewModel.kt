@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.login_screen_sample_with_firebase.R
+import com.example.login_screen_sample_with_firebase.model.User
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -45,7 +46,7 @@ class LoginViewModel : ViewModel() {
 
     fun saveToDatabase(uid : String?, username : String){
         val ref = FirebaseDatabase.getInstance().getReference("users/$uid")
-        val user = uid?.let { User(it,username,"https://cdn.pixabay.com/photo/2018/08/20/22/37/dog-3620181_960_720.jpg",false) }
+        val user = uid?.let { User(it,username,false) }
         ref.setValue(user)
             .addOnSuccessListener {
                 Log.d("RegisterActivity","UserSaved To Database")

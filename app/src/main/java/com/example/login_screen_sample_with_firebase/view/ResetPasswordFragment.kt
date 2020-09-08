@@ -1,4 +1,4 @@
-package com.multilanguagechat.app.view
+package com.example.login_screen_sample_with_firebase.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import com.example.login_screen_sample_with_firebase.R
 import com.google.firebase.auth.FirebaseAuth
-import com.multilanguagechat.app.R
 import com.multilanguagechat.app.viewmodel.ResetPasswordViewModel
 import kotlinx.android.synthetic.main.fragment_forgotpass.*
 class ResetPasswordFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.multilanguagechat.app.view
+package com.example.login_screen_sample_with_firebase.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +16,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.multilanguagechat.app.R
 import com.multilanguagechat.app.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 
@@ -25,7 +24,7 @@ class LoginFragment : Fragment() {
     private lateinit var mGoogleSignInClient: GoogleSignInClient
     private val viewModel = LoginViewModel()
     private lateinit var nav : NavController
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {  //for google sign in function
         super.onActivityResult(requestCode, resultCode, data)
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
@@ -50,7 +49,7 @@ class LoginFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_login, container, false)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            //.requestIdToken(getString(R.string.default_web_client_id)) this row will be activate when you add google-services.json file from firebase
             .requestEmail()
             .build()
         mGoogleSignInClient = context?.let { GoogleSignIn.getClient(it, gso) }!!
@@ -63,7 +62,7 @@ class LoginFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
         nav = Navigation.findNavController(requireView())
         if(auth.currentUser != null){
-            nav.navigate(R.id.action_loginFragment_to_allUsersFragment)
+            //nav.navigate(R.id.action_loginFragment_to_allUsersFragment)  it will navigate your enter screen
         }
         loginButton.setOnClickListener {
             viewModel.openLoadingDialog(requireActivity())
@@ -87,7 +86,7 @@ class LoginFragment : Fragment() {
 
     }
 
-    private fun firebaseAuthWithGoogle(idToken: String) {
+    private fun firebaseAuthWithGoogle(idToken: String) { // with this func. you can easily sign in with google
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
             .addOnCompleteListener() { task ->
@@ -96,7 +95,7 @@ class LoginFragment : Fragment() {
                         .show()
                     viewModel.saveToDatabase(auth.currentUser?.uid, auth.currentUser?.displayName!!)
                     viewModel.makeUserValid(auth.currentUser!!)
-                    nav.navigate(R.id.action_loginFragment_to_allUsersFragment)
+                    //nav.navigate(R.id.action_loginFragment_to_allUsersFragment)   --> you can navigate to your main page
                     viewModel.closeLoadingDialog()
                 } else {
                     viewModel.closeLoadingDialog()

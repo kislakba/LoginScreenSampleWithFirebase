@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.multilanguagechat.app.view.RegisterFragment"
+        android:name="com.example.login_screen_sample_with_firebase.view.RegisterFragment"
         android:label="register_fragment"
         tools:layout="@layout/fragment_register" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="com.multilanguagechat.app.view.ResetPasswordFragment"
+        android:name="com.example.login_screen_sample_with_firebase.view.ResetPasswordFragment"
         android:label="resetpass_fragment"
         tools:layout="@layout/fragment_resetpass" >
         <action
