@@ -32,4 +32,5 @@
     <string name="enter_your_e_mail_for_reset_password">Enter Your E-Mail \n For Reset Password</string>
     <string name="search">Search</string>
     <string name="you_successfully_loged_in">You Successfully Loged In</string>
+    <string name="desc_imageview">You can add your logo here</string>
 </resources>
